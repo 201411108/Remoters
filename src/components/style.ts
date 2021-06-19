@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-// 대략 1rem -> 20px
+export const LogoContainerBlock = styled.div `
+    display: flex;
+    flex-direction: column;
+    padding: 2.5% 10% 0 10%;
+    background-color: rgba(98, 115, 232, 0.1);
+`
 
 export const RowContainer = styled.div `
     display: flex;
