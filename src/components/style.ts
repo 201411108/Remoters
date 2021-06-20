@@ -79,5 +79,114 @@ export const StyledSearchImg = styled.img `
 `
 
 export const CardContainerDiv = styled.div `
+    display: flex;
     background-color: #f9f9f9;
+    justify-content: center;
+`
+
+export const CardAroundRowContainer = styled(AroundRowContainer) `
+    justify-content: space-between;
+    padding: 2% 0 0 0;
+`
+
+export const  CardRowContainer = styled(RowContainer) `
+    padding-bottom: 0;
+    align-items: center;
+`
+
+export const NoneStyledButton = styled.div `
+    width: 13rem;
+    height: 3.5rem;
+`
+
+export const CardContainer = styled(AroundRowContainer) `
+    align-items: center;
+    width: 80rem;
+    height: max-content;
+    padding: 1% 0% 1% 0%;
+    margin-bottom: 0.5%;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem 0 rbga(0, 0, 0, 0.04);
+    background-color: #ffffff;
+`
+
+export const JobColumnContainer = styled(ColumnContainer) `
+    width: 30rem;
+    justify-content: center;
+`
+
+export const JobSpan = styled.span `
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.25px;
+    color: #1d1d1d;
+`
+
+export const PositionSpan = styled(JobSpan) `
+    font-family: NotoSansCJKkr;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #323232;
+`
+
+export const JobRowContainer = styled(RowContainer) `
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding : 0% 0% 0% 0%;
+`
+
+export const TagContainer = styled.div `
+    width: 7rem;
+    height: 1.25rem;
+    margin: 1% 1% 0% 0%;
+    border-radius: 17px;
+    border: solid 1px #4756df;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #5b6ce7;
+`
+
+export const StyledCheckboxLabel = styled.span `
+    width: 8rem;
+    margin-left: 1%;
+    font-family: NotoSansCJKkr;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #252525;
+`
+
+export const StyledContentsContainer = styled(CardContainer) `
+    height: fit-content;
+    white-space: pre-line;
+    background-color: #f3f3f3;
+`
+
+export const StyledContents = styled.div `
+    text-align: left;
+    width: 45rem;
+    margin-bottom: 1%;
+    font-family: NotoSansCJKkr;
+    font-size: 0.975rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #212121;
+`
+
+export const CardColumnContainer = styled(ColumnContainer) `
+    margin-bottom: 1%;
 `

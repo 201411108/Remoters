@@ -6,10 +6,10 @@ interface cardProps {
     children?: JSX.Element
 }
 
-function CardContainer({ children }: cardProps) {
+function CardsContainer({ children }: cardProps) {
     return (
         <CardContainerDiv>{ children }</CardContainerDiv>
     )
 }
 
-export default CardContainer
+export default CardsContainer
