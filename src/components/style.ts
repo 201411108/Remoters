@@ -77,3 +77,7 @@ export const StyledSearchImg = styled.img `
     width: 1.5rem;
     height: 1.5rem;
 `
+
+export const CardContainerDiv = styled.div `
+    background-color: #f9f9f9;
+`
