@@ -2,10 +2,9 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/require-default-props */
 import React, { useState } from 'react'
-import { getTsBuildInfoEmitOutputFilePath } from 'typescript'
 import { StyledButton, NoneStyledButton,
          CardContainer, JobColumnContainer, JobSpan, PositionSpan, JobRowContainer, TagContainer,
-         StyledContentsContainer, StyledContents, CardColumnContainer } from './style'
+         StyledContentsContainer, StyledContents, CardColumnContainer, StyledNoneContentsContainer, StyledNoneContents } from './style'
 
 interface cardProps {
     contents: string;
@@ -85,11 +84,13 @@ function Card({ contents, name, date, logo, position, tags }: cardProps) {
                         }
                 </CardContainer>
                 { !isClick ? (
-                    <StyledContentsContainer>
+                    <StyledContentsContainer className={isClick.toString()}>
                         <StyledContents>{contents}</StyledContents>
                     </StyledContentsContainer>
-                    ) : (
-                        <div />
+                     ) : (
+                    <StyledNoneContentsContainer>
+                        <StyledNoneContents>{contents}</StyledNoneContents>                        
+                    </StyledNoneContentsContainer>
                     )
                 }
             </CardColumnContainer>

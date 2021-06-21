@@ -4,7 +4,7 @@ import Header from 'components/Header'
 import Card from 'components/Card'
 import CardHeader from 'components/CardHeader'
 import CardsContainer from 'components/CardsContainer'
-import { ColumnContainer } from 'components/style'
+import { ColumnContainer, StyledTopButton } from 'components/style'
 
 interface dataType {
     contents: string;
@@ -59,7 +59,15 @@ function Home() {
                         }
                     </ColumnContainer>
                 </CardsContainer>
-                <div>footer</div>
+                <StyledTopButton src='/assets/group-8.webp'
+                                 alt='point' 
+                                 onClick={() => {
+                                     window.scrollTo({
+                                         top: 0,
+                                         left: 0,
+                                         behavior: 'smooth'
+                                     })
+                                 }}/>
             </>
         ) : (
             <>Loading...</>
