@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
 export const LogoContainerBlock = styled.div `
     display: flex;
@@ -80,6 +80,7 @@ export const StyledSearchImg = styled.img `
 
 export const CardContainerDiv = styled.div `
     display: flex;
+    padding: 2% 10% 7% 10%;
     background-color: #f9f9f9;
     justify-content: center;
 `
@@ -168,10 +169,39 @@ export const StyledCheckboxLabel = styled.span `
     color: #252525;
 `
 
+const fadeIn = keyframes `
+    from {
+        height: 0%;
+        opacity: 0;
+    } to {
+        height: 100%;
+        opacity: 1;
+    }
+`
+
+const fadeOut = keyframes `
+    from {
+        height: 100%;
+        opacity: 1;
+    } to {
+        height: 0%;
+        opacity: 0;
+    }
+`
+
 export const StyledContentsContainer = styled(CardContainer) `
-    height: fit-content;
+    height: max-content;
     white-space: pre-line;
     background-color: #f3f3f3;
+    animation: ${fadeIn} 1s;
+`
+
+export const StyledNoneContentsContainer = styled(CardContainer) `
+    height: 0;
+    white-space: pre-line;
+    background-color: #f3f3f3;
+    animation: ${fadeOut} .3s;
+    // display: none;
 `
 
 export const StyledContents = styled.div `
@@ -187,6 +217,22 @@ export const StyledContents = styled.div `
     color: #212121;
 `
 
+export const StyledNoneContents = styled.div `
+    opacity: 0;
+    // height: 0%;
+    text-align: left;
+    width: 45rem;
+    margin-bottom: 1%;
+    font-family: NotoSansCJKkr;
+    font-size: 0.975rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #212121;
+`
+
 export const CardColumnContainer = styled(ColumnContainer) `
     margin-bottom: 1%;
+    // height: max-content;
 `

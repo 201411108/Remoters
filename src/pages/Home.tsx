@@ -59,7 +59,6 @@ function Home() {
                         }
                     </ColumnContainer>
                 </CardsContainer>
-                <div>footer</div>
             </>
         ) : (
             <>Loading...</>
