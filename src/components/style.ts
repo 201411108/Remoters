@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const LogoContainerBlock = styled.div `
     display: flex;
@@ -201,7 +201,6 @@ export const StyledNoneContentsContainer = styled(CardContainer) `
     white-space: pre-line;
     background-color: #f3f3f3;
     animation: ${fadeOut} .3s;
-    // display: none;
 `
 
 export const StyledContents = styled.div `
@@ -234,5 +233,12 @@ export const StyledNoneContents = styled.div `
 
 export const CardColumnContainer = styled(ColumnContainer) `
     margin-bottom: 1%;
-    // height: max-content;
+`
+
+export const StyledTopButton = styled.img `
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    cursor: pointer;
+    z-index: 9999;
 `
