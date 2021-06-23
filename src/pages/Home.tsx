@@ -27,13 +27,16 @@ function Home() {
     })
 
     const getJobs = async () => {
-        await fetch('https://9ka6d9cy9f.execute-api.ap-northeast-2.amazonaws.com/default/getYourcodeInterviewData')
-            .then(response => response.json())
-            .then(response => {
-                setTodayJobs(response.todayJobs)
-                setWeeklyJobs(response.weeklyJobs)
-                setIsLodaing(false)
-            })
+        try {
+            const res = await fetch('https://9ka6d9cy9f.execute-api.ap-northeast-2.amazonaws.com/default/getYourcodeInterviewData')
+                              .then(response => response.json())
+            setTodayJobs(res.todayJobs)
+            setWeeklyJobs(res.weeklyJobs)
+            setIsLodaing(false)
+            
+        } catch (error) {
+            // error 
+        }
     }
 
     return (
