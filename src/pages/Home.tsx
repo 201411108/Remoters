@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import LogoContainer from 'components/LogoContainer'
+import './Home.css'
 import Header from 'components/Header'
 import Card from 'components/Card'
 import CardHeader from 'components/CardHeader'
-import CardsContainer from 'components/CardsContainer'
 import { ColumnContainer, StyledTopButton } from 'components/style'
 
 interface dataType {
@@ -35,7 +34,7 @@ function Home() {
             setIsLodaing(false)
             
         } catch (error) {
-            // error 
+            // error handling
         }
     }
 
@@ -43,25 +42,23 @@ function Home() {
         <>
         { !isLoading ? (
             <>
-                <LogoContainer>
+                <div className='LogoContainer'>
                     <Header />
-                </LogoContainer>
-                <CardsContainer>
+                </div>
+                <div className='CardsContainer'>
                     <ColumnContainer>
-                        {/* today */}
                         <CardHeader title='오늘 들어온 잡' />
                         { todayJobs.map((job) => (
                                 <Card key={job.name} contents={ job.contents } name={job.name} date={job.date} position={job.position} tags={job.tags}/>
                             ))
                         }
-                        {/* weekly */}
                         <CardHeader title='이번주 들어온 잡' />
                         { weeklyJobs.map((job) => (
                                 <Card key={job.name} contents={ job.contents } name={job.name} date={job.date} position={job.position} tags={job.tags}/>
                             ))
                         }
                     </ColumnContainer>
-                </CardsContainer>
+                </div>
                 <StyledTopButton src='/assets/group-8.webp'
                                  alt='point' 
                                  onClick={() => {

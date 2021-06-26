@@ -1,0 +1,13 @@
+.LogoContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5% 10% 0 10%;
+    background-color: rgba(98, 115, 232, 0.1);
+}
+
+.CardsContainer {
+    display: flex;
+    padding: 2% 10% 7% 10%;
+    background-color: #f9f9f9;
+    justify-content: center;
+}
