@@ -1,3 +1,4 @@
+/* rem을 쓰면 어떤 느낌으로 될까 ? */
 .rowContainer {
     display: flex;
     flex-direction: row;
@@ -21,6 +22,65 @@
     background-color: #4756df;
 }
 
+.aroundRowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0% 0% 5% 0%;
+}
+
+.columnContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainLogo {
+    width: 325px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.logoSpan {
+    width: 387px;
+    height: 28px;
+    font-family: NotoSansCJKkr;
+    font-size: 19px;
+    font-weight: 300;
+    color: #5161e3;   
+    padding: 2% 0% 5% 0%;
+    text-align: start;
+}
+
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 385px;
+    height: 55px;
+    border-radius: 38.5px;
+    box-shadow: 0 6px 39px 0 rgba(71, 86, 223, 0.15);
+    background-color: #ffffff;
+}
+
+.searchInput {
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+    border: 0;
+    margin: 0% 13% 0% 0%;
+}
+
+.searchImage {
+    width: 25px;
+    height: 25px;
+}
+
+.mainImage {
+    width: 356px;
+    height: 287px;
+}
+
 @media (max-width: 1023px) {
     .topLogo {
         width: 140px;
@@ -30,6 +90,34 @@
         width: 189px;
         height: 45px;
         font-size: 14px;
+    }
+
+    .mainLogo {
+        width: 280px;
+    }
+
+    .logoSpan {
+        width: 360px;
+        font-size: 17px;
+    }
+    
+    .searchBarContainer {
+        width: 360px;
+        height: 52px;
+    }
+
+    .searchInput {
+        width: 220px;
+    }
+
+    .searchImage {
+        width: 23px;
+        height: 23px;
+    }
+
+    .mainImage {
+        width: 280px;
+        height: 240px;
     }
 }
 
@@ -42,5 +130,33 @@
         width: 160px;
         height: 40px;
         font-size: 12px;
+    }
+
+    .mainLogo {
+        width: 240px;
+    }
+
+    .logoSpan {
+        width: 340px;
+        font-size: 15px;
+    }
+    
+    .searchBarContainer {
+        width: 330px;
+        height: 45px;
+    }
+
+    .searchInput {
+        width: 200px;
+    }
+
+    .searchImage {
+        width: 21px;
+        height: 21px;
+    }
+
+    .mainImage {
+        width: 260px;
+        height: 220px;
     }
 }
