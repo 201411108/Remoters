@@ -2,24 +2,27 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { RowContainer, AroundRowContainer, StyledTopLogo, StyledButton, 
-         ColumnContainer, StyledLogo, StyledSpan, StyledSearchBar, StyledSearchInput, StyledSearchImg } from './style'
+import './Header.css'
+import { AroundRowContainer,  
+         ColumnContainer, StyledButton, StyledLogo, StyledSpan, StyledSearchBar, StyledSearchInput, StyledSearchImg } from './style'
 
 
 function Header() {
     return (
         <>
-            <RowContainer>
-                <StyledTopLogo src='/assets/remoters.webp' 
-                               srcSet='/assets/remoters@2x.webp 2x,
-                                    /assets/remoters@3x.webp 3x'
-                               alt='logo' />
+            <div className='rowContainer'>
+                <img className='topLogo' 
+                     src='/assets/remoters.webp'
+                     srcSet='/assets/remoters@2x.webp 2x,
+                             /assets/remoters@3x.webp 3x'
+                     alt='top-logo'/>
                 <Link to='/company'>
-                    <StyledButton>
+                    <button type='button'
+                            className='enroll-button'>
                         회사 등록하기
-                    </StyledButton>
+                    </button>
                 </Link>
-            </RowContainer>
+            </div>
             <AroundRowContainer>
                 <ColumnContainer>
                     <StyledLogo src='/assets/remoters.webp' 

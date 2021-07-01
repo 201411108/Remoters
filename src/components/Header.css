@@ -1,0 +1,46 @@
+.rowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 0% 5% 0%;
+}
+
+.topLogo {
+    width: 160px;
+    object-fit: contain;
+}
+
+.enroll-button {
+    width: 210px;
+    height: 55px;
+    color: white;
+    font-size: 16px;
+    border-radius: 28px;
+    box-shadow: 10px 10px 30px 0 rgba(67, 67, 67, 0.33);
+    background-color: #4756df;
+}
+
+@media (max-width: 1023px) {
+    .topLogo {
+        width: 140px;
+    }
+
+    .enroll-button {
+        width: 189px;
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .topLogo {
+        width: 120px;
+    }
+
+    .enroll-button {
+        width: 160px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
