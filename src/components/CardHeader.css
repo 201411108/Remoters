@@ -1,0 +1,25 @@
+/* 왜 사이 공간이 안떨이지는 건가 */
+.cardAroundRowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 0% 5% 0%;
+}
+
+.cardRowContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0%;
+    align-items: center;
+}
+
+.label {
+    width: 8rem;
+    margin-left: 1%;
+    font-family: NotoSansCJKkr;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #252525;
+}
