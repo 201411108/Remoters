@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect } from 'react'
 import './Home.css'
 import Header from 'components/Header'
 import Card from 'components/Card'
 import CardHeader from 'components/CardHeader'
-import { ColumnContainer, StyledTopButton } from 'components/style'
+import { ColumnContainer } from 'components/style'
 
 interface dataType {
     contents: string;
@@ -59,15 +61,16 @@ function Home() {
                         }
                     </ColumnContainer>
                 </div>
-                <StyledTopButton src='/assets/group-8.webp'
-                                 alt='point' 
-                                 onClick={() => {
-                                     window.scrollTo({
-                                         top: 0,
-                                         left: 0,
-                                         behavior: 'smooth'
-                                     })
-                                 }}/>
+                <img className='topButton'
+                     src='/assets/group-8.webp'
+                     alt='topButton'
+                     onClick={() => {
+                         window.scrollTo({
+                             top: 0,
+                             left: 0,
+                             behavior: 'smooth'
+                         })
+                     }}/>
             </>
         ) : (
             <>Loading...</>
