@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/require-default-props */
@@ -5,6 +7,7 @@ import React, { useState } from 'react'
 import { StyledButton, NoneStyledButton,
          CardContainer, JobColumnContainer, JobSpan, PositionSpan, JobRowContainer, TagContainer,
          StyledContentsContainer, StyledContents, CardColumnContainer, StyledNoneContentsContainer, StyledNoneContents } from './style'
+import './Card.css'
 
 interface cardProps {
     contents: string;
@@ -57,43 +60,52 @@ function Card({ contents, name, date, logo, position, tags }: cardProps) {
 
     return (
         <>
-            <CardColumnContainer>
-                <CardContainer onClick={() => { setIsClick(!isClick) }}
-                               onMouseEnter={onMouse}
-                               onMouseLeave={onMouseLeave}>
+            <div className='cardColumnContainer'>
+                <div className='cardContainer'
+                     onClick={() => { setIsClick(!isClick) }}
+                     onMouseEnter={ onMouse }
+                     onMouseLeave={ onMouseLeave }>
                     <img src="assets/group-4.jpg"
-                        srcSet="assets/group-4@2x.jpg 2x,
-                        assets/group-4@3x.jpg 3x"
-                        alt='logo' />
-                    <JobColumnContainer>
-                        <JobSpan>{ name }</JobSpan>
-                        <PositionSpan>{ position }</PositionSpan>
-                        <JobRowContainer>
+                         srcSet="assets/group-4@2x.jpg 2x,
+                                 assets/group-4@3x.jpg 3x"
+                         alt='logo' />
+                    <div className='jobColumnContainer'>
+                        <span className='jobSpan'>{ name }</span>
+                        <span className='positionSpan'>{ position }</span>
+                        <div className='jobRowContainer'>
                             { tags?.map((tag) => (
-                                    <TagContainer key={tag}>{tag}</TagContainer>
+                                    <div className='tagContainer' key={ tag }>{ tag }</div>
                                 ))
                             }
-                        </JobRowContainer>
-                    </JobColumnContainer>
+                        </div>
+                    </div>
                     <span>{getTime(date)}</span>
                     { !isHover ? (
-                        <StyledButton onClick={() => alert('지원하기 눌림')}>지원하기</StyledButton>
+                            <button className='styledButton' 
+                                    type='button'
+                                    onClick={() => alert('지원하기 눌림')}>
+                                        지원하기
+                            </button>
                         ) : (
-                            <NoneStyledButton />
-                            )
-                        }
-                </CardContainer>
-                { !isClick ? (
-                    <StyledContentsContainer className={isClick.toString()}>
-                        <StyledContents>{contents}</StyledContents>
-                    </StyledContentsContainer>
-                     ) : (
-                    <StyledNoneContentsContainer>
-                        <StyledNoneContents>{contents}</StyledNoneContents>                        
-                    </StyledNoneContentsContainer>
+                            <div className='noneStyledButton'/>
+                        )
+                    }
+                </div>
+                {/* 클릭 시 나오는 설명 */}
+                {/* { !isClick ? (
+                        <div className='styledContentsContainer'>
+                            <div className='styledContents'>{ contents }</div>
+                        </div>
+                    // <StyledContentsContainer className={isClick.toString()}>
+                    //     <StyledContents>{contents}</StyledContents>
+                    // </StyledContentsContainer>
+                    ) : (
+                        <StyledNoneContentsContainer>
+                            <StyledNoneContents>{contents}</StyledNoneContents>                        
+                        </StyledNoneContentsContainer>
                     )
-                }
-            </CardColumnContainer>
+                } */}
+            </div>
         </>
     )
 }
