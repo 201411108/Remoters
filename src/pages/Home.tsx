@@ -5,7 +5,6 @@ import './Home.css'
 import Header from 'components/Header'
 import Card from 'components/Card'
 import CardHeader from 'components/CardHeader'
-import { ColumnContainer } from 'components/style'
 
 interface dataType {
     contents: string;
@@ -44,11 +43,14 @@ function Home() {
         <>
         { !isLoading ? (
             <>
-                <div className='LogoContainer'>
+                <div className='logoContainer'>
                     <Header />
                 </div>
-                <div className='CardsContainer'>
-                    <ColumnContainer>
+                <div className='cardsContainer'>
+                    <div className='columnContainer'>
+                        <CardHeader title='오늘 들어온 잡'/>
+                    </div>
+                    {/* <ColumnContainer>
                         <CardHeader title='오늘 들어온 잡' />
                         { todayJobs.map((job) => (
                                 <Card key={job.name} contents={ job.contents } name={job.name} date={job.date} position={job.position} tags={job.tags}/>
@@ -59,7 +61,7 @@ function Home() {
                                 <Card key={job.name} contents={ job.contents } name={job.name} date={job.date} position={job.position} tags={job.tags}/>
                             ))
                         }
-                    </ColumnContainer>
+                    </ColumnContainer> */}
                 </div>
                 <img className='topButton'
                      src='/assets/group-8.webp'
