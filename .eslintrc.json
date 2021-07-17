@@ -37,6 +37,12 @@
             2,
             { "extensions": [".js", ".jsx", ".ts", "tsx"] }
         ],
-        "@typescript-eslint/explicit-module-boundary-types": 0
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "guard-for-in": 0,
+        "no-restricted-syntax": 0,
+        "react/require-default-props": 0
     }
 }
