@@ -5,7 +5,7 @@
 
 <h3 align='center'>Preview</h3>
 <p align='center'>
-  <img src='./profile_image.gif'/>
+  <img src='./assets/profile_image.gif'/>
 </p>
 
 ## Stack
