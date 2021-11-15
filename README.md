@@ -12,21 +12,20 @@
     - [2. API](#2-api)
     - [3. Fixed button](#3-fixed-button)
     - [4. Interactive web](#4-interactive-web)
-    - [5. Future work](#5-future-work)
 
 <h3 align='center'>Preview</h3>
 <p align='center'>
   <img src='./assets/profile_image.gif'/>
 </p>
 
-## Stack
+## 💻 Stack
 <p>
   <img src="https://img.shields.io/static/v1?label=&message=React&color=61DAFB&logo=react&logoColor=FFFFFF"/>
   <img src="https://img.shields.io/static/v1?label=&message=Typescript&color=3178C6&logo=typescript&logoColor=FFFFFF"/>
   <img src="https://img.shields.io/static/v1?label=&message=CSS&color=3178C6&logo=css3&logoColor=FFFFFF"/>
 </p>
 
-## Features
+## 💡 Features
 
 ### 1. Routing
   * `react-router-dom`를 활용한 페이지 이동 기능
