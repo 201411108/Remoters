@@ -6,8 +6,8 @@
 ## 🖇️ Contents
 - [Remoters](#remoters)
   - [🖇️ Contents](#️-contents)
-  - [Stack](#stack)
-  - [Features](#features)
+  - [💻 Stack](#stack)
+  - [💡 Features](#features)
     - [1. Routing](#1-routing)
     - [2. API](#2-api)
     - [3. Fixed button](#3-fixed-button)
